@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    group 'org.pira'
+    version '1.0-SNAPSHOT'
+
+    java {
+        sourceCompatibility = '17'
+    }
+
+    ext {
+        set('springCloudVersion', "2023.0.0")
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+// configuration for dependencies common to all subprojects
+dependencies {
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+

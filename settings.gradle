@@ -1,0 +1,6 @@
+rootProject.name = 'perfHydro_micro'
+include 'product-service'
+include 'inventory-service'
+include 'order-service'
+include 'Discovery-server'
+
